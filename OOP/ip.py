@@ -11,8 +11,9 @@ def index():
 
 @app.route('/login', methods=['post'])
 def login():
-    print(request.form.items())
-    username = request.form.get('username', '')
+    for k, v in request.form.items():
+        print(k + ':' + v)
+    username = request.form.get('username','')
     return '<h1> hello,%s!</h1>' % username
 
 

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS的使用</title>
+<!--1    外链式，通过link引入css文件 要在head标签当中引入        推荐     -->
+    <link rel="stylesheet" href="CSS1.css" type="text/css">
+<!--2    嵌入式，通过style标签来写css，也要写在head标签内-->
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+<!--3  内联式，同style属性来设置css式样书-->
+
+<!--在css的三种使用方式中存在优先级问题：离元素越近那谁的优先级就越高-->
+    <div style="background-color: green;width: 200px;height: 200px;" ></div>
+</body>
+</html>

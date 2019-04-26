@@ -1,0 +1,97 @@
+/*div{*/
+/*    width: 200px;*/
+/*    height: 200px;*/
+/*    background-color: blue;*/
+/*}*/
+
+/*注意：基本的三种选择器优先问题，影响范围较大的选择器优先级最低，id > class > 元素选择器 */
+/*推荐使用class--类选择器*/
+
+/*标签选择器，通过标签来设置元素的样式*/
+/*div{*/
+/*    width: 100px;*/
+/*    height: 100px;*/
+/*    background-color: blue;*/
+/*}*/
+/*.类选择器，通过class类名来设置元素的样式,影响范围可控制，相对较小*/
+.item1{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}
+.item2{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    border: 1px solid black;
+}
+/* #id选择器 通过id属性的值来设置元素的样式 影响范围最小*/
+/* 注意id在html当中具有唯一性，不能重名 */
+#box1{
+    width: 300px;
+    height: 300px;
+    background-color: antiquewhite;
+}
+#box2{
+    width: 100px;
+    height: 100px;
+/*    设置边框*/
+    border: 1px solid red;
+}
+#box3
+{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+}
+/* 层级选择器，通过父级元素来设置子级元素的样式，还可以设置子元素的子级的样式 */
+/* 层级选择器可以和多种选择器混合使用 */
+.wrap{
+    width: 500px;
+    height: 500px;
+    border:1px solid red;
+}
+.wrap .in{
+    width: 200px;
+    height: 200px;
+    background-color: green;
+}
+.wrap div{
+    width: 300px;
+    height: 300px;
+    background-color: red;
+}
+/* 关系选择器可以同时给多个元素设置相同的样式 */
+.box1, .box2,.box3 {
+    width: 200px;
+    height: 200px;
+}
+.box1{
+    background-color: red;
+}
+.box2{
+    background-color: green;
+}
+.box3{
+    background-color: blue ;
+}
+/* hover设置鼠标悬停在元素上时的状态 */
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: green;
+}
+.box:hover{
+    /* 鼠标悬停之后的状态 */
+    width: 400px;
+    height: 400px;
+    background-color: red;
+}
+/* after 在元素里面的尾部插入内容 */
+.box:after{
+    content: 'll';
+}
+/* before 在元素里面的头部插入内容 */
+.box:before{
+    content: 'r';
+}
